@@ -1,3 +1,23 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.github.rholder:gradle-one-jar:1.0.4'
+    }
+}
+
 project(':randText') {
     apply plugin: 'java'
+    apply plugin: 'gradle-one-jar'
+
+    repositories {
+        mavenCentral()
+        mavenLocal()
+    }
+
+    task myOneJar(type: OneJar) {
+        mainClass = 'Main'
+    }
 }
