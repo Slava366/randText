@@ -1,0 +1,3 @@
+project(':randText') {
+    apply plugin: 'java'
+}
